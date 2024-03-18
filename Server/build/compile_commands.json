@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/kostya/projects/Server/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_HTTPSERVER_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -I/home/kostya/projects/Server/build -I/home/kostya/projects/Server -I/home/kostya/projects/Server/build/server_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtHttpServer -isystem /usr/include/qt6/QtWebSockets -isystem /usr/include/qt6/QtSql -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o -c /home/kostya/projects/Server/build/server_autogen/mocs_compilation.cpp",
+  "file": "/home/kostya/projects/Server/build/server_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/kostya/projects/Server/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_HTTPSERVER_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -I/home/kostya/projects/Server/build -I/home/kostya/projects/Server -I/home/kostya/projects/Server/build/server_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtHttpServer -isystem /usr/include/qt6/QtWebSockets -isystem /usr/include/qt6/QtSql -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/server.dir/src/main.cpp.o -c /home/kostya/projects/Server/src/main.cpp",
+  "file": "/home/kostya/projects/Server/src/main.cpp",
+  "output": "CMakeFiles/server.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kostya/projects/Server/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_HTTPSERVER_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -I/home/kostya/projects/Server/build -I/home/kostya/projects/Server -I/home/kostya/projects/Server/build/server_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtHttpServer -isystem /usr/include/qt6/QtWebSockets -isystem /usr/include/qt6/QtSql -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/server.dir/src/server.cpp.o -c /home/kostya/projects/Server/src/server.cpp",
+  "file": "/home/kostya/projects/Server/src/server.cpp",
+  "output": "CMakeFiles/server.dir/src/server.cpp.o"
+}
+]

@@ -1,0 +1,10 @@
+# ninja log v5
+603	13370	1710171167318064087	CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o	5bbe097c3d2b9176
+10	603	1710171154537431783	/home/kostya/projects/Server/build/server_autogen/timestamp	537d0658b08e0a68
+603	13379	1710171167328063802	CMakeFiles/server.dir/src/main.cpp.o	920ad1aee1075e90
+10	603	1710171154537431783	/home/kostya/projects/Server/build/server_autogen/mocs_compilation.cpp	537d0658b08e0a68
+10	603	1710171154537431783	server_autogen/mocs_compilation.cpp	537d0658b08e0a68
+10	603	1710171154537431783	server_autogen/timestamp	537d0658b08e0a68
+1	633	1710177462704302563	build.ninja	5f6df4e60b45255d
+4583	5031	1710156975091412410	server	326edd0d86fcf8fc
+64	4583	1710156974645411906	CMakeFiles/server.dir/src/server.cpp.o	2fa5eb09f6f5705b
