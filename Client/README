@@ -1,4 +1,4 @@
-CMake Qt5 GUI Template
+Programm module client designed to interact with the server
 ----------------------
 
 You need Qt5 and CMake 2.8.11 or higher
