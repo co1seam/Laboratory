@@ -1,0 +1,9 @@
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/Client.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/edit_cache.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/rebuild_cache.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/list_install_components.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/install.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/install/local.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/install/strip.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/Client_autogen_timestamp_deps.dir
+/home/kostya/projects/Laboratory/Client/build/CMakeFiles/Client_autogen.dir

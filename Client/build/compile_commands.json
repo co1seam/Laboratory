@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/kostya/projects/Laboratory/Client/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/home/kostya/projects/Laboratory/Client/build -I/home/kostya/projects/Laboratory/Client -I/home/kostya/projects/Laboratory/Client/build/Client_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtNetwork -isystem /usr/include/qt/QtSql -g -fdiagnostics-color=always -fPIC -o CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o -c /home/kostya/projects/Laboratory/Client/build/Client_autogen/mocs_compilation.cpp",
+  "file": "/home/kostya/projects/Laboratory/Client/build/Client_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/kostya/projects/Laboratory/Client/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/home/kostya/projects/Laboratory/Client/build -I/home/kostya/projects/Laboratory/Client -I/home/kostya/projects/Laboratory/Client/build/Client_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtNetwork -isystem /usr/include/qt/QtSql -g -fdiagnostics-color=always -fPIC -o CMakeFiles/Client.dir/src/main.cpp.o -c /home/kostya/projects/Laboratory/Client/src/main.cpp",
+  "file": "/home/kostya/projects/Laboratory/Client/src/main.cpp",
+  "output": "CMakeFiles/Client.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kostya/projects/Laboratory/Client/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/home/kostya/projects/Laboratory/Client/build -I/home/kostya/projects/Laboratory/Client -I/home/kostya/projects/Laboratory/Client/build/Client_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtNetwork -isystem /usr/include/qt/QtSql -g -fdiagnostics-color=always -fPIC -o CMakeFiles/Client.dir/src/client.cpp.o -c /home/kostya/projects/Laboratory/Client/src/client.cpp",
+  "file": "/home/kostya/projects/Laboratory/Client/src/client.cpp",
+  "output": "CMakeFiles/Client.dir/src/client.cpp.o"
+}
+]
