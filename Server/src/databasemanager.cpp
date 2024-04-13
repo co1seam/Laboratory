@@ -118,9 +118,6 @@ QByteArray DatabaseManager::executeSqlFunction(const QString& function_name)
         }
     }
 
-    out.device()->seek(0);
-    out << qint32(block.size() - block_size);
-
     close();
     return block;
 }
