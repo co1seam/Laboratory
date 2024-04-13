@@ -64,3 +64,9 @@
 4	66	1713007601427726241	/home/kostya/projects/Laboratory/Client/build/Client_autogen/mocs_compilation.cpp	8bab24414927c779
 67	4988	1713007611476874901	CMakeFiles/Client.dir/src/client.cpp.o	df1651f4115a712a
 4988	5859	1713007612351887638	Client	8eb0532cc331133f
+11	77	1713017747794958443	Client_autogen/timestamp	8bab24414927c779
+11	77	1713017747794958443	Client_autogen/mocs_compilation.cpp	8bab24414927c779
+11	77	1713017747794958443	/home/kostya/projects/Laboratory/Client/build/Client_autogen/timestamp	8bab24414927c779
+11	77	1713017747794958443	/home/kostya/projects/Laboratory/Client/build/Client_autogen/mocs_compilation.cpp	8bab24414927c779
+79	9039	1713031404510289648	CMakeFiles/Client.dir/src/client.cpp.o	df1651f4115a712a
+9039	9832	1713031405288275950	Client	8eb0532cc331133f

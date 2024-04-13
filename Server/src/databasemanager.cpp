@@ -92,21 +92,31 @@ QByteArray DatabaseManager::executeSqlFunction(const QString& function_name)
     if(query.first()){
 
         qint32 column_count = query.record().count();
-        out << column_count;
 
-        for(qsizetype i = 0; i < column_count; ++i){
-            out << query.record().fieldName(i);
-            block_size += query.record().fieldName(i).size();
-        }
+        console_logger->log(QString("Column count is: %1").arg(column_count), Logger::Level::DEBUG);
 
         do{
             for(qsizetype i = 0; i < column_count; ++i){
                 out << query.value(i).toString();
+                console_logger->log(QString("Query value is: %1").arg(query.value(i).toString()), Logger::Level::DEBUG);
                 block_size += query.value(i).toString().size();
+                console_logger->log(QString("Size of the query value is: %1").arg(query.value(i).toString().size()), Logger::Level::DEBUG);
+
             }
         } while (query.next());
-    }
 
+        out.device()->seek(0);
+        out << qint32(block.size() - block_size);
+        out << column_count;
+        console_logger->log(QString("Column count is: %1").arg(column_count), Logger::Level::DEBUG);
+
+        for(qsizetype i = 0; i < column_count; ++i){
+            out << query.record().fieldName(i);
+            console_logger->log(QString("Field name is: %1").arg(query.record().fieldName(i)), Logger::Level::DEBUG);
+            block_size += query.record().fieldName(i).size();
+            console_logger->log(QString("Size of the field name is: %1").arg(query.record().fieldName(i).size()), Logger::Level::DEBUG);
+        }
+    }
 
     out.device()->seek(0);
     out << qint32(block.size() - block_size);
