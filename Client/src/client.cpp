@@ -47,13 +47,14 @@ void Client::onEncrypted()
 void Client::onDisconnected()
 {
     m_ui->statusBar->showMessage((QString("Отсоединение от сервера")));
+    model->clear();
     emit disconnected();
 }
 
 void Client::onSslErrors(const QList<QSslError> &errors)
 {
     for(const QSslError &error: errors){
-        qDebug() << (QString("Ошибка: %1").arg(error.errorString()));
+        qDebug().noquote() << QString("Ошибка: %1").arg(error.errorString());
     }
 
     emit sslErrorOccured(errors);
@@ -61,60 +62,61 @@ void Client::onSslErrors(const QList<QSslError> &errors)
 
 void Client::readFromServer()
 {
-    QStandardItemModel *model = new QStandardItemModel(this);
-    while(m_socket->bytesAvailable() > 0){
-        QByteArray data_block_size = m_socket->readLine();
-        bool ok;
-        int block_size = data_block_size.toInt(&ok);
-        if(!ok){
-            return;
-        }
+    QByteArray data_block_size = m_socket->readLine();
+    bool ok;
+    int block_size = data_block_size.toInt(&ok);
+    qDebug().noquote() << QString("Block size is: %1").arg(block_size);
+    if(!ok){
+        return;
+    }
 
-        QByteArray block;
-        while(block.size() < block_size){
-            block.append(m_socket->read(block_size - block.size()));
-        }
+    QByteArray block;
+    while(block.size() < block_size){
+        block.append(m_socket->read(block_size - block.size()));
+    }
 
-        QDataStream in(&block, QIODevice::ReadOnly);
-        in.setVersion(QDataStream::Qt_5_15);
+    QDataStream in(&block, QIODevice::ReadOnly);
+    in.setVersion(QDataStream::Qt_5_15);
 
-        qint32 column_count;
-        in >> column_count;
+    quint32 column_count;
+    in >> block_size >> column_count;
+    qDebug().noquote() << QString("Column count is: %1").arg(column_count);
 
-        QStringList headers;
+    QStringList headers;
+
+    for(qsizetype i = 0; i < column_count; ++i){
+        QString header;
+        in >> header;
+        qDebug().noquote() << QString("Header is: %1").arg(header);
+        headers << header;
+    }
+
+    model->setHorizontalHeaderLabels(headers);
+
+    while(in.status() == QDataStream::Ok && !in.atEnd()){
+        QList<QStandardItem *> items;
         for(qsizetype i = 0; i < column_count; ++i){
-            QString header;
-            in >> header;
-            headers << header;
+            QString data;
+            in >> data;
+            qDebug().noquote() << (QString("Data is: %1").arg(data));
+            items.append(new QStandardItem(data));
         }
-        model->setHorizontalHeaderLabels(headers);
-
-        while(!in.atEnd()){
-            QList<QStandardItem *> items;
-            for(qsizetype i = 0; i < column_count; ++i){
-                QString data;
-                in >> data;
-
-                if(in.status() != QDataStream::Ok){
-                    m_ui->statusBar->showMessage(QString("Ошибка чтения данных: %1").arg(in.status()));
-                    return;
-                }
-                items.append(new QStandardItem(data));
-            }
-            model->appendRow(items);
-        }
+        model->appendRow(items);
     }
 
-    if(m_ui->table->model() != model){
-        m_ui->table->setModel(model);
+    if(m_ui->statusBar && in.status() != QDataStream::Ok){
+        m_ui->statusBar->showMessage(QString("Ошибка чтения данных: %1").arg(in.status()));
+        delete model;
+        return;
     }
+    m_ui->table->setModel(model);
 }
+
 
 
 void Client::onReadyRead()
 {
     readFromServer();
-    m_ui->statusBar->showMessage(QString("Данные получены"));
 }
 
 

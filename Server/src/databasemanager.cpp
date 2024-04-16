@@ -43,7 +43,10 @@ void DatabaseManager::close()
 
 bool DatabaseManager::executeStoredProcedure(const QString& procedure_name, const QVariantList& parameters = QVariantList())
 {
-    open();
+    if(!open()){
+        console_logger->log(QString("Database failed open"), Logger::Level::ERROR);
+        return false;
+    }
 
     QSqlQuery query(db);
     QString call_string = QString("CALL %1(").arg(procedure_name);
@@ -62,7 +65,6 @@ bool DatabaseManager::executeStoredProcedure(const QString& procedure_name, cons
     }
 
     close();
-
     return true;
 }
 
@@ -88,34 +90,29 @@ QByteArray DatabaseManager::executeSqlFunction(const QString& function_name)
 
     out << qint32(0);
 
-    qint32 block_size = 0;
+    qint32 column_count = query.record().count();
+    console_logger->log(QString("Column count is: %1").arg(column_count), Logger::Level::DEBUG);
+
+    out << column_count;
+    for(qint32 i = 0; i < column_count; ++i){
+        out << query.record().fieldName(i);
+        console_logger->log(QString("Field name is: %1").arg(query.record().fieldName(i)), Logger::Level::DEBUG);
+    }
+
     if(query.first()){
-
-        qint32 column_count = query.record().count();
-
-        console_logger->log(QString("Column count is: %1").arg(column_count), Logger::Level::DEBUG);
-
         do{
-            for(qsizetype i = 0; i < column_count; ++i){
+            for(qint32 i = 0; i < column_count; ++i){
                 out << query.value(i).toString();
                 console_logger->log(QString("Query value is: %1").arg(query.value(i).toString()), Logger::Level::DEBUG);
-                block_size += query.value(i).toString().size();
-                console_logger->log(QString("Size of the query value is: %1").arg(query.value(i).toString().size()), Logger::Level::DEBUG);
 
             }
         } while (query.next());
 
         out.device()->seek(0);
-        out << qint32(block.size() - block_size);
+        out << quint32(block.size() - sizeof(qint32));
         out << column_count;
-        console_logger->log(QString("Column count is: %1").arg(column_count), Logger::Level::DEBUG);
+        console_logger->log(QString("Block size is: %1").arg(block.size()), Logger::Level::DEBUG);
 
-        for(qsizetype i = 0; i < column_count; ++i){
-            out << query.record().fieldName(i);
-            console_logger->log(QString("Field name is: %1").arg(query.record().fieldName(i)), Logger::Level::DEBUG);
-            block_size += query.record().fieldName(i).size();
-            console_logger->log(QString("Size of the field name is: %1").arg(query.record().fieldName(i).size()), Logger::Level::DEBUG);
-        }
     }
 
     close();

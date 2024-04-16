@@ -12,7 +12,6 @@ Server::Server()
         return;
     if(!this->startServer())
         return;
-
 }
 
 Server::~Server() = default;
@@ -114,6 +113,7 @@ void Server::onEncrypted()
     QString peer_address = socket->peerAddress().toString();
     quint16 peer_port = socket->peerPort();
     console_logger->log(QString("Connection is encrypted with %1:%2").arg(peer_address).arg(peer_port), Logger::Level::INFO);
+
 }
 
 void Server::onSslErrors(const QList<QSslError> &errors)
@@ -179,7 +179,7 @@ void Server::sendToClient(const QString &function_name)
     }
 
     for(QSslSocket *client: clients) {
-        if(client->state() != QAbstractSocket::ConnectedState) {
+        if(client->state() != QAbstractSocket::ConnectedState && !client->isOpen() && !client->isEncrypted()) {
             QString client_info = client ? QString("Client %1:%2 is not connected")
                                             .arg(client->peerAddress().toString(), client->peerPort()) : QString("Client is nullptr");
             console_logger->log(client_info, Logger::Level::WARNING);
@@ -193,7 +193,6 @@ void Server::sendToClient(const QString &function_name)
 
 void Server::processClientData(QSslSocket* socket, const QByteArray& data)
 {
-    db_manager->open();
 
     QDataStream stream(data);
     stream.setVersion(QDataStream::Qt_5_15);

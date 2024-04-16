@@ -30,6 +30,7 @@ private:
     QString m_host;
     quint16 m_port;
     QSslSocket *m_socket;
+    QStandardItemModel *model = new QStandardItemModel(this);
 
 signals:
     void encrypted();
