@@ -95,7 +95,7 @@ QByteArray DatabaseManager::executeSqlFunction(const QString& function_name)
 
     out << column_count;
     for(qint32 i = 0; i < column_count; ++i){
-        out << query.record().fieldName(i);
+        out << translateFields(query.record().fieldName(i));
         console_logger->log(QString("Field name is: %1").arg(query.record().fieldName(i)), Logger::Level::DEBUG);
     }
 
@@ -117,4 +117,23 @@ QByteArray DatabaseManager::executeSqlFunction(const QString& function_name)
 
     close();
     return block;
+}
+
+QString DatabaseManager::translateFields(QString english_name)
+{
+    const QMap<QString, QString> fields = {
+        {"fullname", "ФИО"},
+        {"age", "Возраст"},
+        {"sex", "Пол"},
+        {"maritalstatus", "Семейное положение"},
+        {"availabilityofchildren", "Наличие детей"},
+        {"e_position", "Должность"},
+        {"academicdegree", "Ученая степень"}
+    };
+
+    QMap<QString, QString>::const_iterator it = fields.find(english_name);
+
+    if(it != fields.end())
+        return it.value();
+    return english_name;
 }

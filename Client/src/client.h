@@ -32,6 +32,10 @@ private:
     QSslSocket *m_socket;
     QStandardItemModel *model = new QStandardItemModel(this);
 
+    QString translateHeaders(QString english_name);
+
+    void Client::add_employee();
+
 signals:
     void encrypted();
     void disconnected();

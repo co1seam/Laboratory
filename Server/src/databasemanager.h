@@ -49,6 +49,8 @@ public:
 private:
     QSqlDatabase db;
     QScopedPointer<Logger> console_logger;
+
+    QString translateFields(QString english_name);
 };
 
 #endif // DATABASEMANAGER_H

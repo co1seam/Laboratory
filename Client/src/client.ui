@@ -52,7 +52,7 @@
         <item row="0" column="0">
          <widget class="QStackedWidget" name="stackedWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page">
            <layout class="QGridLayout" name="gridLayout">
@@ -386,7 +386,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lastNameEdit">
+                     <widget class="QLineEdit" name="LastNameInput1">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -435,7 +435,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="firstNameEdit">
+                     <widget class="QLineEdit" name="FirstNameInput1">
                       <property name="minimumSize">
                        <size>
                         <width>170</width>
@@ -478,7 +478,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="middleNameEdit">
+                     <widget class="QLineEdit" name="MiddleNameInput1">
                       <property name="minimumSize">
                        <size>
                         <width>170</width>
@@ -521,7 +521,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="ageEdit">
+                     <widget class="QLineEdit" name="AgeInput1">
                       <property name="minimumSize">
                        <size>
                         <width>170</width>
@@ -564,7 +564,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox"/>
+                     <widget class="QComboBox" name="SexInput1"/>
                     </item>
                    </layout>
                   </item>
@@ -600,7 +600,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_2"/>
+                     <widget class="QComboBox" name="MaritalStatusInput1"/>
                     </item>
                    </layout>
                   </item>
@@ -636,7 +636,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_3"/>
+                     <widget class="QComboBox" name="AvailabilityOfChildren1"/>
                     </item>
                    </layout>
                   </item>
@@ -672,7 +672,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_4"/>
+                     <widget class="QComboBox" name="PositionInput1"/>
                     </item>
                    </layout>
                   </item>
@@ -708,7 +708,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_5"/>
+                     <widget class="QComboBox" name="AcademicDegreeInput1"/>
                     </item>
                    </layout>
                   </item>
@@ -724,7 +724,7 @@
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_5">
                   <item>
-                   <widget class="QLineEdit" name="lastNameEdit_2">
+                   <widget class="QLineEdit" name="LastNameInput2">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -741,7 +741,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="firstNameEdit_2">
+                   <widget class="QLineEdit" name="FirstNameInput2">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -758,7 +758,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="middleNameEdit_2">
+                   <widget class="QLineEdit" name="MiddleNameInput2">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -775,7 +775,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="ageEdit_2">
+                   <widget class="QLineEdit" name="AgeInput2">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -792,7 +792,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_6"/>
+                   <widget class="QComboBox" name="SexInput2"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_17">
@@ -802,7 +802,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_8"/>
+                   <widget class="QComboBox" name="MaritalStatusInput2"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_23">
@@ -812,7 +812,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_9"/>
+                   <widget class="QComboBox" name="AvailabilityOfChildren2"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_21">
@@ -822,7 +822,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_7"/>
+                   <widget class="QComboBox" name="PositionInput2"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_19">
@@ -832,7 +832,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_10"/>
+                   <widget class="QComboBox" name="AcademicDegreeInput2"/>
                   </item>
                  </layout>
                 </item>
@@ -846,7 +846,7 @@
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_7">
                   <item>
-                   <widget class="QLineEdit" name="lastNameEdit_3">
+                   <widget class="QLineEdit" name="LastNameInput3">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -863,7 +863,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="firstNameEdit_3">
+                   <widget class="QLineEdit" name="FirstNameInput3">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -880,7 +880,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="middleNameEdit_3">
+                   <widget class="QLineEdit" name="MiddleNameInput3">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -897,7 +897,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="ageEdit_3">
+                   <widget class="QLineEdit" name="AgeInput3">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -914,7 +914,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_11"/>
+                   <widget class="QComboBox" name="SexInput3"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_29">
@@ -924,7 +924,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_12"/>
+                   <widget class="QComboBox" name="MaritalStatusInput3"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_30">
@@ -934,7 +934,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_13"/>
+                   <widget class="QComboBox" name="AvailabilityOfChildren3"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_31">
@@ -944,7 +944,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_15"/>
+                   <widget class="QComboBox" name="PositionInput3"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_32">
@@ -954,7 +954,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_14"/>
+                   <widget class="QComboBox" name="AcademicDegreeInput3"/>
                   </item>
                  </layout>
                 </item>
@@ -968,7 +968,7 @@
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
                   <item>
-                   <widget class="QLineEdit" name="lastNameEdit_4">
+                   <widget class="QLineEdit" name="LastNameInput4">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -985,7 +985,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="firstNameEdit_4">
+                   <widget class="QLineEdit" name="FirstNameInput4">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1002,7 +1002,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="middleNameEdit_4">
+                   <widget class="QLineEdit" name="MiddleNameInput4">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1019,7 +1019,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="ageEdit_4">
+                   <widget class="QLineEdit" name="AgeInput4">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1036,7 +1036,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_16"/>
+                   <widget class="QComboBox" name="SexInput4"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_37">
@@ -1046,7 +1046,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_18"/>
+                   <widget class="QComboBox" name="MaritalStatusInput4"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_38">
@@ -1056,7 +1056,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_17"/>
+                   <widget class="QComboBox" name="AvailabilityOfChildren4"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_39">
@@ -1066,7 +1066,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_19"/>
+                   <widget class="QComboBox" name="PositionInput4"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_40">
@@ -1076,7 +1076,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_20"/>
+                   <widget class="QComboBox" name="AcademicDegreeInput4"/>
                   </item>
                  </layout>
                 </item>
@@ -1090,7 +1090,7 @@
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
                   <item>
-                   <widget class="QLineEdit" name="lastNameEdit_5">
+                   <widget class="QLineEdit" name="LastNameInput5">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1107,7 +1107,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="firstNameEdit_5">
+                   <widget class="QLineEdit" name="FirstNameInput5">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1124,7 +1124,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="middleNameEdit_5">
+                   <widget class="QLineEdit" name="MiddleNameInput5">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1141,7 +1141,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="ageEdit_5">
+                   <widget class="QLineEdit" name="AgeInput5">
                     <property name="minimumSize">
                      <size>
                       <width>170</width>
@@ -1158,7 +1158,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_21"/>
+                   <widget class="QComboBox" name="SexInput5"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_45">
@@ -1168,7 +1168,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_22"/>
+                   <widget class="QComboBox" name="MaritalStatusInput5"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_46">
@@ -1178,7 +1178,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_23"/>
+                   <widget class="QComboBox" name="AvailabilityOfChildren5"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_47">
@@ -1188,7 +1188,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_24"/>
+                   <widget class="QComboBox" name="PositionInput5"/>
                   </item>
                   <item>
                    <widget class="Line" name="line_48">
@@ -1198,7 +1198,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_25"/>
+                   <widget class="QComboBox" name="AcademicDegreeInput5"/>
                   </item>
                  </layout>
                 </item>
